@@ -65,12 +65,17 @@ public class Picture
     }
 
     /**
-     * Bajar sun
+     * Bajar sun y dejar en blanco y negro
      */
     public void movesun()
     {
         {
             sun.slowMoveVertical(100);
+            wall.changeColor("black");
+            window.changeColor("white");
+            roof.changeColor("black");
+            sun.changeColor("black");
+            ground.changeColor("black");
         }
     }
     
@@ -85,6 +90,7 @@ public class Picture
             window.changeColor("white");
             roof.changeColor("black");
             sun.changeColor("black");
+            ground.changeColor("black");
         }
     }
 

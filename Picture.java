@@ -16,6 +16,7 @@ public class Picture
     private Triangle roof;
     private Circle sun;
     private Square ground;
+    private Person persona;
 
     /**
      * Constructor for objects of class Picture
@@ -76,6 +77,20 @@ public class Picture
             roof.changeColor("black");
             sun.changeColor("black");
             ground.changeColor("black");
+        }
+    }
+    
+        /**
+     * Aperece una persona y se acerca a la casa
+     */
+    public void persona()
+    {
+        {
+            persona = new Person();
+            persona.moveHorizontal(-250);
+            persona.moveVertical(20);
+            persona.makeVisible(); 
+            persona.slowMoveHorizontal(125);
         }
     }
     

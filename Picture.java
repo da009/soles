@@ -65,9 +65,9 @@ public class Picture
     }
 
     /**
-     * Move sun
+     * Bajar sun
      */
-    public void sun()
+    public void movsun()
     {
         {
             sun.slowMoveVertical(100);

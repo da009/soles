@@ -17,6 +17,9 @@ public class Picture
     private Circle sun;
     private Square ground;
     private Person persona;
+    private Person persona1;
+    private Person persona2;
+    private Person persona3;
 
     /**
      * Constructor for objects of class Picture
@@ -87,10 +90,50 @@ public class Picture
     {
         {
             persona = new Person();
-            persona.moveHorizontal(-250);
+            persona.moveHorizontal(-300);
             persona.moveVertical(20);
             persona.makeVisible(); 
-            persona.slowMoveHorizontal(125);
+            persona.slowMoveHorizontal(175);
+        }
+    }
+    
+         /**
+     * Creas personas invisibles
+     */
+    public void invmen()
+    {
+        {
+            persona1 = new Person();
+            persona1.moveHorizontal(-150);
+            persona1.moveVertical(-200);
+            
+            persona2 = new Person();
+            persona2.moveHorizontal(110);
+            persona2.moveVertical(-200);
+            
+            persona3 = new Person();
+            persona3.moveHorizontal(0);
+            persona3.moveVertical(-200);
+        }
+    }
+    
+             /**
+     * Llueven personas
+     */
+    public void rainningmen()
+    {
+        if (persona1 != null)   // only if it's visible already...
+        if (persona2 != null)   // only if it's visible already...
+        if (persona3 != null)   // only if it's visible already...
+        {
+            persona1.makeVisible(); 
+            persona1.slowMoveVertical(220);
+
+            persona2.makeVisible(); 
+            persona2.slowMoveVertical(220);
+
+            persona3.makeVisible(); 
+            persona3.slowMoveVertical(220);
         }
     }
     
@@ -120,6 +163,7 @@ public class Picture
             window.changeColor("black");
             roof.changeColor("green");
             sun.changeColor("yellow");
+            ground.changeColor("green");
         }
     }
 }
